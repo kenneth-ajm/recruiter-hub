@@ -68,22 +68,26 @@ export default function RecruiterRampHub() {
                 <ResourceItem url="https://openviewpartners.com/plg">Read OpenView’s PLG deep dive</ResourceItem>
                 <ResourceItem>Understand revenue channels: ChatGPT, API, Teams</ResourceItem>
                 <ResourceItem>
-                  Study GTM acronyms:
-                  <ul className="ml-4 list-disc">
-                    <li><strong>CAC (Customer Acquisition Cost)</strong>: Total cost to acquire a new customer</li>
-                    <li><strong>LTV (Lifetime Value)</strong>: Revenue expected from a customer over time</li>
-                    <li><strong>PLG (Product-Led Growth)</strong>: Growth driven by product usage (e.g., freemium to paid)</li>
-                    <li><strong>Churn</strong>: Percentage of customers lost over a time period</li>
-                  </ul>
+                  <div>
+                    Study GTM acronyms:
+                    <ul className="ml-4 list-disc">
+                      <li><strong>CAC (Customer Acquisition Cost)</strong>: Total cost to acquire a new customer</li>
+                      <li><strong>LTV (Lifetime Value)</strong>: Revenue expected from a customer over time</li>
+                      <li><strong>PLG (Product-Led Growth)</strong>: Growth driven by product usage (e.g., freemium to paid)</li>
+                      <li><strong>Churn</strong>: Percentage of customers lost over a time period</li>
+                    </ul>
+                  </div>
                 </ResourceItem>
                 <ResourceItem>
-                  Summarize GTM org structure:
-                  <ul className="ml-4 list-disc">
-                    <li><strong>Sales</strong>: Drives revenue through customer acquisition and deal closing</li>
-                    <li><strong>BD (Business Development)</strong>: Builds partnerships and external integrations</li>
-                    <li><strong>PMM (Product Marketing)</strong>: Owns product messaging, positioning, and market fit</li>
-                    <li><strong>CS (Customer Success)</strong>: Ensures product adoption, retention, and support</li>
-                  </ul>
+                  <div>
+                    Summarize GTM org structure:
+                    <ul className="ml-4 list-disc">
+                      <li><strong>Sales</strong>: Drives revenue through customer acquisition and deal closing</li>
+                      <li><strong>BD (Business Development)</strong>: Builds partnerships and external integrations</li>
+                      <li><strong>PMM (Product Marketing)</strong>: Owns product messaging, positioning, and market fit</li>
+                      <li><strong>CS (Customer Success)</strong>: Ensures product adoption, retention, and support</li>
+                    </ul>
+                  </div>
                 </ResourceItem>
               </ul>
             </CardContent>
@@ -106,7 +110,6 @@ export default function RecruiterRampHub() {
         </TabsContent>
 
         {/* Additional tabs and quiz logic preserved separately */}
-
       </Tabs>
     </main>
   );
