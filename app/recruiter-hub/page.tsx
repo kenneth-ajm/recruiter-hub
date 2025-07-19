@@ -27,7 +27,7 @@ export default function RecruiterRampHub() {
     setScore(points);
   };
 
-  const ResourceItem = ({ children, url }: { children: string; url?: string }) => (
+  const ResourceItem = ({ children, url }: { children: React.ReactNode; url?: string }) => (
     <li className="flex items-start gap-2">
       <input type="checkbox" className="mt-1" />
       <span>
