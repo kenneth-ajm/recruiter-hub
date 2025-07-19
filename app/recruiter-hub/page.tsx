@@ -2,6 +2,8 @@
 // Updated to display all learning items upfront without accordion toggles
 // Mobile optimizations added for responsiveness and readability
 
+'use client';
+
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
