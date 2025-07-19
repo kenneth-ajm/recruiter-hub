@@ -105,8 +105,7 @@ export default function RecruiterRampHub() {
           </Card>
         </TabsContent>
 
-        {/* Other tabs unchanged */}
-
+        {/* Additional tabs and quiz logic preserved separately */}
 
       </Tabs>
     </main>
