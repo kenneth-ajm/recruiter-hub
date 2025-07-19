@@ -45,7 +45,89 @@ export default function RecruiterRampHub() {
           <TabsTrigger value="quiz">Knowledge Quiz</TabsTrigger>
         </TabsList>
 
-        {/* Week 1–2, Week 3–4, Ongoing Learning Tabs (Unchanged) */}
+        <TabsContent value="week1">
+          <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
+            <CardContent className="p-4 space-y-3 text-sm sm:text-base">
+              <h2 className="text-xl font-semibold">GTM Fundamentals</h2>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Learn OpenAI monetization (ChatGPT, API, fine-tuning, Team plans)</li>
+                <li>Understand GTM pillars (Sales, PMM, BD, CS, RevOps)</li>
+                <li>Read OpenAI’s <a href="https://openai.com/blog" className="text-blue-400 underline" target="_blank">official blog</a></li>
+                <li>Read <a href="https://www.lennysnewsletter.com" className="text-blue-400 underline" target="_blank">Lenny’s Newsletter</a>, <a href="https://openviewpartners.com" className="text-blue-400 underline" target="_blank">OpenView</a>, <a href="https://firstround.com" className="text-blue-400 underline" target="_blank">First Round</a></li>
+                <li>Memorize GTM terms (CAC, QBR, PLG, Churn, Win Rate)</li>
+                <li>Reflect on one great GTM hire you've seen</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="week3">
+          <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
+            <CardContent className="p-4 space-y-3 text-sm sm:text-base">
+              <h2 className="text-xl font-semibold">Understanding GTM Talent</h2>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Review AE, PMM, BD profiles (Stripe, OpenAI, Snowflake)</li>
+                <li>Practice intake meeting with mock HM</li>
+                <li>Review GTM interview structures (discovery, ROI, positioning)</li>
+                <li>Boolean sourcing: ("enterprise AE" AND AI AND Singapore)</li>
+                <li>Review GTM comp on <a href="https://www.levels.fyi" className="text-blue-400 underline" target="_blank">levels.fyi</a></li>
+              </ul>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="ongoing">
+          <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
+            <CardContent className="p-4 space-y-3 text-sm sm:text-base">
+              <h2 className="text-xl font-semibold">Ongoing Learning</h2>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Follow key AI newsletters (Import AI, Latent Space)</li>
+                <li>Study compensation trends quarterly</li>
+                <li>Track top GTM hires at Anthropic, DeepMind, OpenAI</li>
+                <li>Contribute to hiring strategy & onboarding docs</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="scorecards">
+          <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
+            <CardContent className="p-4 space-y-3 text-sm sm:text-base">
+              <h2 className="text-xl font-semibold">Templates & Scorecards</h2>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Discovery Interview: 3 core areas + motivations</li>
+                <li>AE Hiring Scorecard: metrics, closing skills, startup grit</li>
+                <li>PMM Scorecard: narrative skills, GTM exposure, test projects</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="booleans">
+          <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
+            <CardContent className="p-4 space-y-3 text-sm sm:text-base">
+              <h2 className="text-xl font-semibold">Boolean Strings</h2>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>("enterprise AE" AND AI AND Singapore)</li>
+                <li>(PMM OR "product marketing") AND (Lenny OR messaging OR launch)</li>
+                <li>("business development" OR "GTM partnerships") AND (OpenAI OR Anthropic)</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="talentmap">
+          <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
+            <CardContent className="p-4 space-y-3 text-sm sm:text-base">
+              <h2 className="text-xl font-semibold">Talent Map</h2>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Top GTM talent at OpenAI, Anthropic, DeepMind</li>
+                <li>Source pools from Snowflake, Stripe, Databricks</li>
+                <li>Track regional GTM leaders in Singapore, Japan, Australia</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </TabsContent>
 
         <TabsContent value="quiz">
           <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
