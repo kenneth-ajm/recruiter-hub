@@ -1,12 +1,10 @@
-// Recruiter Ramp Hub - Expanded Version with Full Functionality + Quiz Section
-// Updated to display all learning items upfront without accordion toggles
-// Mobile optimizations added for responsiveness and readability
+// Recruiter Ramp Hub - Restored Full Version with Checkboxes, Links & Quiz
+// All content now rendered upfront with detailed resources, mobile-optimized layout
 
 'use client';
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
 
 export default function RecruiterRampHub() {
@@ -29,10 +27,25 @@ export default function RecruiterRampHub() {
     setScore(points);
   };
 
+  const ResourceItem = ({ children, url }: { children: string; url?: string }) => (
+    <li className="flex items-start gap-2">
+      <input type="checkbox" className="mt-1" />
+      <span>
+        {url ? (
+          <a href={url} className="underline text-blue-300" target="_blank" rel="noopener noreferrer">
+            {children}
+          </a>
+        ) : (
+          children
+        )}
+      </span>
+    </li>
+  );
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white px-4 sm:px-6 py-6 font-sans">
       <h1 className="text-3xl sm:text-4xl font-bold mb-4">OpenAI Recruiter Ramp-Up Hub</h1>
-      <p className="mb-6 text-gray-300 text-sm sm:text-base">Comprehensive onboarding plan for GTM recruiting in AI startups and high-growth environments</p>
+      <p className="mb-6 text-gray-300 text-sm sm:text-base">Structured onboarding for GTM recruiting in AI-driven environments</p>
 
       <Tabs defaultValue="week1" className="w-full">
         <TabsList className="mb-4 flex flex-wrap gap-2 px-2 sm:px-0">
@@ -48,14 +61,14 @@ export default function RecruiterRampHub() {
         <TabsContent value="week1">
           <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
             <CardContent className="p-4 space-y-3 text-sm sm:text-base">
-              <h2 className="text-xl font-semibold">GTM Fundamentals</h2>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>Learn OpenAI monetization (ChatGPT, API, fine-tuning, Team plans)</li>
-                <li>Understand GTM pillars (Sales, PMM, BD, CS, RevOps)</li>
-                <li>Read OpenAI’s <a href="https://openai.com/blog" className="text-blue-400 underline" target="_blank">official blog</a></li>
-                <li>Read <a href="https://www.lennysnewsletter.com" className="text-blue-400 underline" target="_blank">Lenny’s Newsletter</a>, <a href="https://openviewpartners.com" className="text-blue-400 underline" target="_blank">OpenView</a>, <a href="https://firstround.com" className="text-blue-400 underline" target="_blank">First Round</a></li>
-                <li>Memorize GTM terms (CAC, QBR, PLG, Churn, Win Rate)</li>
-                <li>Reflect on one great GTM hire you've seen</li>
+              <h2 className="text-xl font-semibold">Week 1–2: GTM Fundamentals</h2>
+              <ul className="space-y-2 list-none">
+                <ResourceItem url="https://openai.com/blog">Read OpenAI Blog (for product & GTM direction)</ResourceItem>
+                <ResourceItem url="https://www.lennysnewsletter.com">Subscribe to Lenny’s Newsletter (PMM, GTM cases)</ResourceItem>
+                <ResourceItem url="https://openviewpartners.com/plg">Read OpenView’s PLG deep dive</ResourceItem>
+                <ResourceItem>Understand revenue channels: ChatGPT, API, Teams</ResourceItem>
+                <ResourceItem>Study GTM acronyms: CAC, LTV, PLG, Churn</ResourceItem>
+                <ResourceItem>Summarize GTM org structure (Sales, BD, PMM, CS)</ResourceItem>
               </ul>
             </CardContent>
           </Card>
@@ -64,13 +77,13 @@ export default function RecruiterRampHub() {
         <TabsContent value="week3">
           <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
             <CardContent className="p-4 space-y-3 text-sm sm:text-base">
-              <h2 className="text-xl font-semibold">Understanding GTM Talent</h2>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>Review AE, PMM, BD profiles (Stripe, OpenAI, Snowflake)</li>
-                <li>Practice intake meeting with mock HM</li>
-                <li>Review GTM interview structures (discovery, ROI, positioning)</li>
-                <li>Boolean sourcing: ("enterprise AE" AND AI AND Singapore)</li>
-                <li>Review GTM comp on <a href="https://www.levels.fyi" className="text-blue-400 underline" target="_blank">levels.fyi</a></li>
+              <h2 className="text-xl font-semibold">Week 3–4: Talent Fluency</h2>
+              <ul className="space-y-2 list-none">
+                <ResourceItem>Review AE profiles from Snowflake & Stripe</ResourceItem>
+                <ResourceItem>Shadow hiring manager intake calls</ResourceItem>
+                <ResourceItem>Review GTM JDs from OpenAI and Databricks</ResourceItem>
+                <ResourceItem url="https://levels.fyi">Compare comp bands at Levels.fyi</ResourceItem>
+                <ResourceItem>Draft Boolean string for PMM in Singapore</ResourceItem>
               </ul>
             </CardContent>
           </Card>
@@ -80,11 +93,11 @@ export default function RecruiterRampHub() {
           <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
             <CardContent className="p-4 space-y-3 text-sm sm:text-base">
               <h2 className="text-xl font-semibold">Ongoing Learning</h2>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>Follow key AI newsletters (Import AI, Latent Space)</li>
-                <li>Study compensation trends quarterly</li>
-                <li>Track top GTM hires at Anthropic, DeepMind, OpenAI</li>
-                <li>Contribute to hiring strategy & onboarding docs</li>
+              <ul className="space-y-2 list-none">
+                <ResourceItem url="https://latent.space">Subscribe to Latent Space newsletter</ResourceItem>
+                <ResourceItem>Track AI GTM hires monthly (OpenAI, Anthropic)</ResourceItem>
+                <ResourceItem>Contribute to team onboarding playbooks</ResourceItem>
+                <ResourceItem>Attend external events via Pavilion, GTMfund</ResourceItem>
               </ul>
             </CardContent>
           </Card>
@@ -92,12 +105,12 @@ export default function RecruiterRampHub() {
 
         <TabsContent value="scorecards">
           <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
-            <CardContent className="p-4 space-y-3 text-sm sm:text-base">
-              <h2 className="text-xl font-semibold">Templates & Scorecards</h2>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>Discovery Interview: 3 core areas + motivations</li>
-                <li>AE Hiring Scorecard: metrics, closing skills, startup grit</li>
-                <li>PMM Scorecard: narrative skills, GTM exposure, test projects</li>
+            <CardContent className="p-4">
+              <h2 className="text-xl font-semibold mb-3">Interview Templates</h2>
+              <ul className="list-disc list-inside space-y-2">
+                <li>AE: Discovery, Objection Handling, Closing</li>
+                <li>PMM: Messaging, GTM strategy, Collaboration</li>
+                <li>BD: Ecosystem thinking, Prior deals, Storytelling</li>
               </ul>
             </CardContent>
           </Card>
@@ -105,12 +118,12 @@ export default function RecruiterRampHub() {
 
         <TabsContent value="booleans">
           <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
-            <CardContent className="p-4 space-y-3 text-sm sm:text-base">
-              <h2 className="text-xl font-semibold">Boolean Strings</h2>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>("enterprise AE" AND AI AND Singapore)</li>
-                <li>(PMM OR "product marketing") AND (Lenny OR messaging OR launch)</li>
-                <li>("business development" OR "GTM partnerships") AND (OpenAI OR Anthropic)</li>
+            <CardContent className="p-4">
+              <h2 className="text-xl font-semibold mb-3">Boolean Strings</h2>
+              <ul className="list-disc list-inside space-y-2">
+                <li>("account executive" OR AE) AND (AI OR "machine learning") AND Singapore</li>
+                <li>(PMM OR "product marketing") AND ("go-to-market" OR launch)</li>
+                <li>("business development" OR BD) AND ("openai" OR "chatgpt")</li>
               </ul>
             </CardContent>
           </Card>
@@ -118,12 +131,12 @@ export default function RecruiterRampHub() {
 
         <TabsContent value="talentmap">
           <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
-            <CardContent className="p-4 space-y-3 text-sm sm:text-base">
-              <h2 className="text-xl font-semibold">Talent Map</h2>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>Top GTM talent at OpenAI, Anthropic, DeepMind</li>
-                <li>Source pools from Snowflake, Stripe, Databricks</li>
-                <li>Track regional GTM leaders in Singapore, Japan, Australia</li>
+            <CardContent className="p-4">
+              <h2 className="text-xl font-semibold mb-3">Talent Map</h2>
+              <ul className="list-disc list-inside space-y-2">
+                <li>Track AE, PMM, BD leads from Stripe, Snowflake, Anthropic</li>
+                <li>Flag notable GTM switches in APAC and U.S. every quarter</li>
+                <li>Map VP+ profiles across GTM teams using LinkedIn projects</li>
               </ul>
             </CardContent>
           </Card>
@@ -175,7 +188,6 @@ export default function RecruiterRampHub() {
             </CardContent>
           </Card>
         </TabsContent>
-
       </Tabs>
     </main>
   );
