@@ -105,7 +105,8 @@ export default function RecruiterRampHub() {
           </Card>
         </TabsContent>
 
-        <!-- Other tabs unchanged -->
+        {/* Other tabs unchanged */}
+
 
       </Tabs>
     </main>
