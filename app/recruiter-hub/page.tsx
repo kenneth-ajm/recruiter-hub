@@ -68,26 +68,22 @@ export default function RecruiterRampHub() {
                 <ResourceItem url="https://openviewpartners.com/plg">Read OpenView’s PLG deep dive</ResourceItem>
                 <ResourceItem>Understand revenue channels: ChatGPT, API, Teams</ResourceItem>
                 <ResourceItem>
-                  <div>
-                    Study GTM acronyms:
-                    <ul className="ml-4 list-disc">
-                      <li><strong>CAC (Customer Acquisition Cost)</strong>: Total cost to acquire a new customer</li>
-                      <li><strong>LTV (Lifetime Value)</strong>: Revenue expected from a customer over time</li>
-                      <li><strong>PLG (Product-Led Growth)</strong>: Growth driven by product usage (e.g., freemium to paid)</li>
-                      <li><strong>Churn</strong>: Percentage of customers lost over a time period</li>
-                    </ul>
-                  </div>
+                  Study GTM acronyms:
+                  <ul className="ml-4 list-disc">
+                    <li><strong>CAC (Customer Acquisition Cost)</strong>: Total cost to acquire a new customer</li>
+                    <li><strong>LTV (Lifetime Value)</strong>: Revenue expected from a customer over time</li>
+                    <li><strong>PLG (Product-Led Growth)</strong>: Growth driven by product usage (e.g., freemium to paid)</li>
+                    <li><strong>Churn</strong>: Percentage of customers lost over a time period</li>
+                  </ul>
                 </ResourceItem>
                 <ResourceItem>
-                  <div>
-                    Summarize GTM org structure:
-                    <ul className="ml-4 list-disc">
-                      <li><strong>Sales</strong>: Drives revenue through customer acquisition and deal closing</li>
-                      <li><strong>BD (Business Development)</strong>: Builds partnerships and external integrations</li>
-                      <li><strong>PMM (Product Marketing)</strong>: Owns product messaging, positioning, and market fit</li>
-                      <li><strong>CS (Customer Success)</strong>: Ensures product adoption, retention, and support</li>
-                    </ul>
-                  </div>
+                  Summarize GTM org structure:
+                  <ul className="ml-4 list-disc">
+                    <li><strong>Sales</strong>: Drives revenue through customer acquisition and deal closing</li>
+                    <li><strong>BD (Business Development)</strong>: Builds partnerships and external integrations</li>
+                    <li><strong>PMM (Product Marketing)</strong>: Owns product messaging, positioning, and market fit</li>
+                    <li><strong>CS (Customer Success)</strong>: Ensures product adoption, retention, and support</li>
+                  </ul>
                 </ResourceItem>
               </ul>
             </CardContent>
@@ -109,7 +105,61 @@ export default function RecruiterRampHub() {
           </Card>
         </TabsContent>
 
-        {/* Additional tabs and quiz logic preserved separately */}
+        <TabsContent value="ongoing">
+          <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
+            <CardContent className="p-4 space-y-3 text-sm sm:text-base">
+              <h2 className="text-xl font-semibold">Ongoing Learning</h2>
+              <ul className="space-y-2 list-none">
+                <ResourceItem url="https://www.firstround.com">Read First Round’s GTM series</ResourceItem>
+                <ResourceItem url="https://future.com">Study a16z and Future on AI GTM trends</ResourceItem>
+                <ResourceItem>Bookmark Notion GTM resources, frameworks, teardown decks</ResourceItem>
+              </ul>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="scorecards">
+          <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
+            <CardContent className="p-4 space-y-3 text-sm sm:text-base">
+              <h2 className="text-xl font-semibold">Templates & Scorecards</h2>
+              <ul className="space-y-2 list-none">
+                <ResourceItem>PMM scorecard (positioning, storytelling, launch ownership)</ResourceItem>
+                <ResourceItem>AE scorecard (discovery depth, ROI selling, quota size fit)</ResourceItem>
+                <ResourceItem>BD scorecard (partner ecosystem, technical depth, ICP)</ResourceItem>
+              </ul>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="booleans">
+          <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
+            <CardContent className="p-4 space-y-3 text-sm sm:text-base">
+              <h2 className="text-xl font-semibold">Boolean Strings</h2>
+              <ul className="space-y-2 list-none">
+                <ResourceItem>PMM: ("product marketing" OR PMM) AND (AI OR ML) AND Singapore</ResourceItem>
+                <ResourceItem>AE: ("account executive" OR "enterprise AE") AND LLM AND APAC</ResourceItem>
+                <ResourceItem>BD: ("business development" OR partnerships) AND "generative AI"</ResourceItem>
+              </ul>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="talentmap">
+          <Card className="bg-white/5 backdrop-blur-lg border border-white/10 text-white">
+            <CardContent className="p-4 space-y-3 text-sm sm:text-base">
+              <h2 className="text-xl font-semibold">Talent Map</h2>
+              <ul className="space-y-2 list-none">
+                <ResourceItem>Review recent moves: AE hires from OpenAI, Anthropic, Runway</ResourceItem>
+                <ResourceItem>Chart out PMM profiles from Meta, Notion, Canva</ResourceItem>
+                <ResourceItem>Track unicorn AI startup GTM teams: Mistral, Perplexity, Inflection</ResourceItem>
+              </ul>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="quiz">
+          {/* Quiz block remains unchanged */}
+        </TabsContent>
       </Tabs>
     </main>
   );
